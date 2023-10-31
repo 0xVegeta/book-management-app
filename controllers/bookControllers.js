@@ -1,9 +1,9 @@
 const Book = require("../models/bookModel");
 
 const createBook = async (req, res) => {
-  const { title, author, summary } = req.body;
-  try {
-    const book = await createBook({title, author, summary});
+	const { title, author, summary } = req.body;
+	try {
+		const book = new Book({ title, author, summary });
 		await book.save();
 		res.status(201).json(book);
 	} catch (error) {
@@ -25,7 +25,7 @@ const getBookById = async (req, res) => {
 	try {
 		const book = await Book.findById(id);
 		if (!book) {
-      return res.status(404).json({error: "Book not found "});
+			return res.status(404).json({ error: "Book not found " });
 		}
 		res.status(200).json(book);
 	} catch (error) {
