@@ -37,6 +37,25 @@ $ npm start
 
 # Make requests on http://localhost:PORT/ from Postman
 ```
+## Postman Collection
+
+```
+# A file called APICollection.json has been provided in the repo.
+# This file can be directly imported in the postman to get all the APIs used
+```
+
+
+
+## API Reference
+
+
+| REQUEST METHODS | ENDPOINTS | DESCRIPTION |
+| :-------------- | :-------: | ------------------: |
+| POST | /api/books/ |  Add a new book |
+| GET | /api/books/ | Fetch all the books |
+| GET | /api/books/:id | Fetch details of a specific book |
+| PATCH | /api/books/:id | Update details of a specific book |
+| DELETE | /api/books/:id | Delete a specific book |
 
 ## Routes
 
